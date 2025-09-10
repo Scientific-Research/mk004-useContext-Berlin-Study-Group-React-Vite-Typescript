@@ -7,7 +7,7 @@ import { PageFlashcards } from './components/PageFlashcards';
 function App() {
   return (
     <div className="App">
-      <h1>Berlin-Study-Group</h1>
+      <h1>Berlin Study Group</h1>
 
       <nav>
         <NavLink to="welcome">Welcome</NavLink>
