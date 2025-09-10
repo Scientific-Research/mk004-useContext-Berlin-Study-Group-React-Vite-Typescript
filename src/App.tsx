@@ -1,8 +1,8 @@
 // import './App.css';
-import { NavLink, Route, Routes } from 'react-router-dom';
+import { Navigate, NavLink, Route, Routes } from 'react-router-dom';
 import { PageWelcome } from './components/PageWelcome';
-import { PageInfo } from './components/PageInfo';
-import { PageAbout } from './components/PageAbout';
+import { PageBooks } from './components/PageBooks';
+import { PageFlashcards } from './components/PageFlashcards';
 
 function App() {
   return (
@@ -11,14 +11,15 @@ function App() {
 
       <nav>
         <NavLink to="welcome">Welcome</NavLink>
-        <NavLink to="info">Info</NavLink>
-        <NavLink to="about">About</NavLink>
+        <NavLink to="books">Books</NavLink>
+        <NavLink to="flashcards">Flashcards</NavLink>
       </nav>
 
       <Routes>
         <Route path="welcome" element={<PageWelcome />}></Route>
-        <Route path="info" element={<PageInfo />}></Route>
-        <Route path="about" element={<PageAbout />}></Route>
+        <Route path="books" element={<PageBooks />}></Route>
+        <Route path="flashcards" element={<PageFlashcards />}></Route>
+        <Route path="/" element={<Navigate to="welcome" />}></Route>
       </Routes>
 
       {/* <h3>welcome to this site.</h3> */}
