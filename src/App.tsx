@@ -1,5 +1,8 @@
 // import './App.css';
 import { NavLink, Route, Routes } from 'react-router-dom';
+import { PageWelcome } from './components/PageWelcome';
+import { PageInfo } from './components/PageInfo';
+import { PageAbout } from './components/PageAbout';
 
 function App() {
   return (
@@ -12,8 +15,13 @@ function App() {
         <NavLink to="about">About</NavLink>
       </nav>
 
-      <Routes>{/* <Route path='welcome' element={<Page/>}></Route> */}</Routes>
-      <h3>welcome to this site.</h3>
+      <Routes>
+        <Route path="welcome" element={<PageWelcome />}></Route>
+        <Route path="info" element={<PageInfo />}></Route>
+        <Route path="about" element={<PageAbout />}></Route>
+      </Routes>
+
+      {/* <h3>welcome to this site.</h3> */}
     </div>
   );
 }

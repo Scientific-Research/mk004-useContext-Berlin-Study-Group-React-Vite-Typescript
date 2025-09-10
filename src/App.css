@@ -15,4 +15,23 @@ body {
     color: rgb(225, 225, 20);
     margin-bottom: 1rem;
   }
+
+  nav {
+    margin-bottom: 1rem;
+    background-color: #222;
+    padding: 0.5rem;
+    a {
+      color: #aaa;
+      text-decoration: none;
+      margin-right: 1rem;
+
+      &:hover {
+        color: rgb(88, 143, 69);
+      }
+
+      &.active {
+        color: yellow;
+      }
+    }
+  }
 }
