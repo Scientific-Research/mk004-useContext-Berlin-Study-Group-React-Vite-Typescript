@@ -40,12 +40,21 @@ export const AppProvider = ({ children }: IAppProvider) => {
       try {
         const response = (await axios.get(booksURl)).data;
         setBooks(response);
-        console.log(books);
       } catch (error) {
         console.error('Error fetching books', error);
       }
     })();
   }, []);
+
+  // Wenn du sehen willst, wann books wirklich aktualisiert wurde, kannst du einen zweiten useEffect verwenden:
+  useEffect(() => {
+    (() => {
+      console.log('Books wurden geladen', books);
+    })();
+  }, [books]);
+  // Dieser Effekt wird nur ausgeführt, wenn sich books ändert — also nach dem erfolgreichen setBooks().
+
+  // console.log(books);
 
   return (
     <AppContext.Provider
