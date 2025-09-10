@@ -5,14 +5,19 @@ interface IAppContext {
   datePartners: string[];
 }
 
+const _AppContext = {
+  appTitle: '',
+  datePartners: ['', ''],
+};
+
 interface IAppProvider {
   children: ReactNode;
 }
 
-export const AppContext = createContext<IAppContext | undefined>(undefined);
+export const AppContext = createContext<IAppContext>(_AppContext);
 
 export const AppProvider = ({ children }: IAppProvider) => {
-  const appTitle = 'The Study Group';
+  const appTitle = 'The Berlin Study Group';
   const datePartners = ['Mary', 'Miriam'];
 
   return (

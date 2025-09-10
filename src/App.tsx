@@ -4,10 +4,15 @@ import { PageWelcome } from './components/PageWelcome';
 import { PageBooks } from './components/PageBooks';
 import { PageFlashcards } from './components/PageFlashcards';
 
+import { useContext } from 'react';
+import { AppContext } from './components/AppContext';
+
 function App() {
+  const { appTitle } = useContext(AppContext);
+
   return (
     <div className="App">
-      <h1>Berlin Study Group</h1>
+      <h1>{appTitle}</h1>
 
       <nav>
         <NavLink to="welcome">Welcome</NavLink>
