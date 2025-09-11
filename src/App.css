@@ -43,4 +43,31 @@ body {
       }
     }
   }
+
+  .pageBooks {
+    .pageBook {
+      background-color: #222;
+      display: flex;
+      margin: 1rem 0;
+      padding: 1rem;
+
+      img {
+        width: 10rem;
+      }
+      .bookInfo {
+        margin-left: 1rem;
+
+        .title {
+          font-size: 2rem;
+          color: rgb(212, 212, 133);
+          margin-bottom: 1rem;
+        }
+
+        .description {
+          font-size: 1.25rem;
+          color: #ddd;
+        }
+      }
+    }
+  }
 }
