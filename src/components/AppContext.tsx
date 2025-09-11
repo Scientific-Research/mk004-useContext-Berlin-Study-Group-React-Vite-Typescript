@@ -1,29 +1,13 @@
 import { useState, useEffect, createContext, ReactNode } from 'react';
 import axios from 'axios';
 
-interface IBook {
-  id: number;
-  idCode: string;
-  title: string;
-  description: string;
-  language: string;
-}
-
-interface IAppContext {
-  appTitle: string;
-  datePartners: string[];
-  books: IBook[];
-}
+import { IBook, IAppContext, IAppProvider } from '../Interfaces';
 
 const _defaultContext = {
   appTitle: '',
   datePartners: [],
   books: [],
 };
-
-interface IAppProvider {
-  children: ReactNode;
-}
 
 const booksURl = 'https://edwardtanguay.vercel.app/share/techBooks.json';
 
