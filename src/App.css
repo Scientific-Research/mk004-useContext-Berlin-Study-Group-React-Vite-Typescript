@@ -34,4 +34,13 @@ body {
       }
     }
   }
+
+  .pageWelcome {
+    .welcomePage {
+      .club,
+      .loading {
+        margin-top: 0.5rem;
+      }
+    }
+  }
 }
