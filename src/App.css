@@ -37,9 +37,25 @@ body {
 
   .pageWelcome {
     .welcomePage {
+      font-size: larger;
       .club,
       .loading {
         margin-top: 0.5rem;
+        color: greenyellow;
+      }
+
+      .loading {
+        span {
+          color: cornflowerblue;
+        }
+      }
+
+      .club {
+        span {
+          color: rgb(191, 136, 136);
+          /* font-size: larger; */
+          /* font-weight: bold; */
+        }
       }
     }
   }

@@ -8,10 +8,10 @@ export const PageWelcome = () => {
       <p>Welcome to this site.</p>
       <div className="welcomePage">
         {books.length === 0 ? (
-          <p className="loading">Loading...</p>
+          <p className="loading"><span>Loading...</span></p>
         ) : (
           <p className="club">
-            In our club we are reading {books.length} books.
+            In our club we are reading <span>{books.length}</span> books.
           </p>
         )}
       </div>
